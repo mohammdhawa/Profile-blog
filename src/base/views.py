@@ -1,16 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
 # Create your views here.
 
 def home(request):
-    return HttpResponse("<h2> Home </h2>")
+    
+    context = {}
+    return render(request, 'base/home.html', context)
 
 def posts(request):
-    return HttpResponse("<h2>Posts</h2>")
+
+    context = {}
+    return render(request, 'base/posts.html', context)
 
 def post(request):
-    return HttpResponse("<h2>Post Title")
+    
+    context = {}
+    return render(request, 'base/post.html', context)
 
 def profile(request):
-    return HttpResponse("<h2>User Profile </h2>")
+    
+    context = {}
+    return render(request, 'base/profile.html', context)
