@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     "crispy_bootstrap4",
     'django_filters',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -148,3 +150,14 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ismekbektop@gmail.com'
 EMAIL_HOST_PASSWORD = 'bzobigwhsqfknxxa'
+
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
