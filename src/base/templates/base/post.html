@@ -3,11 +3,22 @@
 
 {% block content %}
 
-<div class="main-container">
-	<h1>Post Title</h1>
+<style type="text/css">
+	img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+</style>
 
-	<img src="{% static 'images/Dennis.jpg' %}">
-	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae omnis aliquam, enim nam a maxime in, nesciunt sed, iste adipisci sit porro autem nihil obcaecati nulla debitis ea laudantium magni?</p>
+<div class="main-container">
+
+	<img src="{{post.thumbnail.url}}">
+
+	<h1>{{post.headline}}</h1>
+
+	<h4>{{post.sub_headline}}</h4>
+
+	<p>{{post.body}}</p>
 </div>
 	
 {% endblock content %}

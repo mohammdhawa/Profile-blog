@@ -116,39 +116,21 @@
 			<h3 style="text-align: center;">Some of my past projects</h3>
 
 			<div class="post-wrapper">
-
+				
+				{% for post in posts %}
+					
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="{% static 'images/dash.jpg' %}">
+						<img class="thumbnail" src="{{post.thumbnail.url}}">
 						<div class="post-preview">
-							<h6 class="post-title">Laboratory Management System</h6>
-							<p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-							<a href="{% url 'base:post' %}">Read More</a>
+							<h6 class="post-title">{{post.headline}}</h6>
+							<p class="post-intro">{{post.sub_headline}}</p>
+							<a href="{% url 'base:post' post.id %}">Read More</a>
 						</div>
 					</div>
 				</div>
 
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="{% static 'images/ecom.jpg' %}">
-						<div class="post-preview">
-							<h6 class="post-title">Online Store - CoursePost Title</h6>
-							<p class="post-intro">Online store with paypal payments intergration and guest user shopping</p>
-							<a href="{% url 'base:post' %}">Read More</a>
-						</div>
-					</div>
-				</div>
-
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="{% static 'images/membership site.jpg' %}">
-						<div class="post-preview">
-							<h6 class="post-title">Membership Website</h6>
-							<p class="post-intro">Modulized guide for online courses with step by  step intructions</p>
-							<a href="{% url 'base:post' %}">Read More</a>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 
 			</div>
 
