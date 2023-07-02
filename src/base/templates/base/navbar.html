@@ -11,7 +11,7 @@
     
 
     <ul id="navigation">
-        <li><a href="{% url 'base:home' %}">Contact</a></li>
+        <li><a href="#to-email">Contact</a></li>
         
         {% if request.user.is_authenticated %}
         <li><a href="{% url 'base:create_post' %}">Create Post</a></li>
