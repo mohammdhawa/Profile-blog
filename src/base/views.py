@@ -12,7 +12,7 @@ from .forms import PostForm
 from .filters import PostFilter
 
 def home(request):
-    posts = Post.objects.filter(active=True, featured=True).order_by('id')[:3]
+    posts = Post.objects.filter(active=True, featured=True).order_by('-id')[:3]
 
     context = {'posts': posts}
     return render(request, 'base/index.html', context)
